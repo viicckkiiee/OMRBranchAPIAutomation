@@ -1,0 +1,710 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "Verify User login to the application through API",
+        "description": "",
+        "id": "login-module-api-automation;verify-user-login-to-the-application-through-api",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1581623300,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User should add header",
+            "match": {
+              "location": "LoginStep.userShouldAddHeader()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 185318300,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User should add basic authorization for login",
+            "match": {
+              "location": "LoginStep.userShouldAddBasicAuthorizationForLogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6369212400,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User should send \"POST\" request to login endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"POST\"",
+                  "offset": 17
+                }
+              ],
+              "location": "LoginStep.userShouldSendRequestToLoginEndpoint(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: Verify static status code expected:\u003c401\u003e but was:\u003c200\u003e\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\r\n\tat org.junit.Assert.assertEquals(Assert.java:647)\r\n\tat com.stepdefinition.CommonSteps.userShouldVerifyTheStatusCodeIs(CommonSteps.java:26)\r\n\tat ✽.User should verify the status code is 200(src/test/resources/TC1_Login.feature:8)\r\n",
+              "duration": 4495600,
+              "status": "failed"
+            },
+            "line": 8,
+            "name": "User should verify the status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 38
+                }
+              ],
+              "location": "CommonSteps.userShouldVerifyTheStatusCodeIs(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10600,
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "User should verify the login response body firstName present as \"Vignesh\" and get the logtoken",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Vignesh\"",
+                  "offset": 64
+                }
+              ],
+              "location": "LoginStep.userShouldVerifyTheLoginResponseBodyFirstNamePresentAsAndGetTheLogtoken(String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Login"
+          }
+        ]
+      }
+    ],
+    "name": "Login Module API Automation",
+    "description": "",
+    "id": "login-module-api-automation",
+    "keyword": "Feature",
+    "uri": "src/test/resources/TC1_Login.feature",
+    "tags": [
+      {
+        "name": "@Login",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 14,
+        "name": "Verify add new address to the application through API",
+        "description": "",
+        "id": "address-module-api-automation;verify-add-new-address-to-the-application-through-api;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1447000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User should add headers",
+            "match": {
+              "location": "AddressStep.userShouldAddHeaders()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 899423000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User should add required data for adding the address  \"Vignesh\" , \"V\", \"1234567898\", \"DreamHouse\", 33, 3378, 101, \"606107\", \"64/63 West mambalam\" and \"Home\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Vignesh\"",
+                  "offset": 54
+                },
+                {
+                  "val": "\"V\"",
+                  "offset": 66
+                },
+                {
+                  "val": "\"1234567898\"",
+                  "offset": 71
+                },
+                {
+                  "val": "\"DreamHouse\"",
+                  "offset": 85
+                },
+                {
+                  "val": "33",
+                  "offset": 99
+                },
+                {
+                  "val": "3378",
+                  "offset": 103
+                },
+                {
+                  "val": "101",
+                  "offset": 109
+                },
+                {
+                  "val": "\"606107\"",
+                  "offset": 114
+                },
+                {
+                  "val": "\"64/63 West mambalam\"",
+                  "offset": 124
+                },
+                {
+                  "val": "\"Home\"",
+                  "offset": 150
+                }
+              ],
+              "location": "AddressStep.userShouldAddRequiredDataForAddingTheAddressAnd(String,String,String,String,int,int,int,String,String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3071582000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User should send \"POST\" request to AddAddress endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"POST\"",
+                  "offset": 17
+                }
+              ],
+              "location": "AddressStep.userShouldSendRequestToAddAddressEndpoint(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: Verify static status code expected:\u003c401\u003e but was:\u003c200\u003e\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\r\n\tat org.junit.Assert.assertEquals(Assert.java:647)\r\n\tat com.stepdefinition.CommonSteps.userShouldVerifyTheStatusCodeIs(CommonSteps.java:26)\r\n\tat ✽.User should verify the status code is 200(src/test/resources/TC2_Address.feature:9)\r\n",
+              "duration": 502700,
+              "status": "failed"
+            },
+            "line": 9,
+            "name": "User should verify the status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 38
+                }
+              ],
+              "location": "CommonSteps.userShouldVerifyTheStatusCodeIs(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 12900,
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "User should verify the addAddress response body message matches \"Address added successfully\" and get the address id saved",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Address added successfully\"",
+                  "offset": 64
+                }
+              ],
+              "location": "AddressStep.userShouldVerifyTheAddAddressResponseBodyMessageMatchesAndGetTheAddressIdSaved(String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Address"
+          },
+          {
+            "name": "@AddAddress"
+          }
+        ]
+      },
+      {
+        "line": 26,
+        "name": "Verify update address in the application through API",
+        "description": "",
+        "id": "address-module-api-automation;verify-update-address-in-the-application-through-api;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1403300,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "User should add headers",
+            "match": {
+              "location": "AddressStep.userShouldAddHeaders()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 22493200,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "User should add required data for updating the address  \"MohanDass\" , \"Chidambaram\", \"1234567898\", \"DreamHouse\", 33, 3378, 101, \"606107\", \"64/63 West mambalam\" and \"Home\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"MohanDass\"",
+                  "offset": 56
+                },
+                {
+                  "val": "\"Chidambaram\"",
+                  "offset": 70
+                },
+                {
+                  "val": "\"1234567898\"",
+                  "offset": 85
+                },
+                {
+                  "val": "\"DreamHouse\"",
+                  "offset": 99
+                },
+                {
+                  "val": "33",
+                  "offset": 113
+                },
+                {
+                  "val": "3378",
+                  "offset": 117
+                },
+                {
+                  "val": "101",
+                  "offset": 123
+                },
+                {
+                  "val": "\"606107\"",
+                  "offset": 128
+                },
+                {
+                  "val": "\"64/63 West mambalam\"",
+                  "offset": 138
+                },
+                {
+                  "val": "\"Home\"",
+                  "offset": 164
+                }
+              ],
+              "location": "AddressStep.userShouldAddRequiredDataForUpdatingTheAddressAnd(String,String,String,String,int,int,int,String,String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2936451500,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "User should send \"PUT\" request to UpdateAddress endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"PUT\"",
+                  "offset": 17
+                }
+              ],
+              "location": "AddressStep.userShouldSendRequestToUpdateAddressEndpoint(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: Verify static status code expected:\u003c401\u003e but was:\u003c200\u003e\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\r\n\tat org.junit.Assert.assertEquals(Assert.java:647)\r\n\tat com.stepdefinition.CommonSteps.userShouldVerifyTheStatusCodeIs(CommonSteps.java:26)\r\n\tat ✽.User should verify the status code is 200(src/test/resources/TC2_Address.feature:21)\r\n",
+              "duration": 466400,
+              "status": "failed"
+            },
+            "line": 21,
+            "name": "User should verify the status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 38
+                }
+              ],
+              "location": "CommonSteps.userShouldVerifyTheStatusCodeIs(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 12300,
+              "status": "skipped"
+            },
+            "line": 22,
+            "name": "User should verify the updateAddress response body message matches \"Address updated successfully\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Address updated successfully\"",
+                  "offset": 67
+                }
+              ],
+              "location": "AddressStep.userShouldVerifyTheUpdateAddressResponseBodyMessageMatches(String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Address"
+          },
+          {
+            "name": "@UpdateAddress"
+          }
+        ]
+      },
+      {
+        "line": 29,
+        "name": "Verify get address from the appilcation through API",
+        "description": "",
+        "id": "address-module-api-automation;verify-get-address-from-the-appilcation-through-api",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1086100,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "User should add headers",
+            "match": {
+              "location": "AddressStep.userShouldAddHeaders()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3117883400,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "User should send \"GET\" request to getAddress endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"GET\"",
+                  "offset": 17
+                }
+              ],
+              "location": "AddressStep.userShouldSendRequestToGetAddressEndpoint(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: Verify static status code expected:\u003c401\u003e but was:\u003c200\u003e\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\r\n\tat org.junit.Assert.assertEquals(Assert.java:647)\r\n\tat com.stepdefinition.CommonSteps.userShouldVerifyTheStatusCodeIs(CommonSteps.java:26)\r\n\tat ✽.User should verify the status code is 200(src/test/resources/TC2_Address.feature:32)\r\n",
+              "duration": 396300,
+              "status": "failed"
+            },
+            "line": 32,
+            "name": "User should verify the status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 38
+                }
+              ],
+              "location": "CommonSteps.userShouldVerifyTheStatusCodeIs(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 9300,
+              "status": "skipped"
+            },
+            "line": 33,
+            "name": "User should verify the getaddress response body message matches \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"OK\"",
+                  "offset": 64
+                }
+              ],
+              "location": "AddressStep.userShouldVerifyTheGetaddressResponseBodyMessageMatches(String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Address"
+          },
+          {
+            "name": "@GetAddress"
+          }
+        ]
+      },
+      {
+        "line": 36,
+        "name": "Verify delete address from the application through API",
+        "description": "",
+        "id": "address-module-api-automation;verify-delete-address-from-the-application-through-api",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1040700,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "User should add headers",
+            "match": {
+              "location": "AddressStep.userShouldAddHeaders()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 9582300,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "User should add addressId in request body for deleting the address",
+            "match": {
+              "location": "AddressStep.userShouldAddAddressIdInRequestBodyForDeletingTheAddress()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2995670000,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "User should send \"DELETE\" request to deleteaddress endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DELETE\"",
+                  "offset": 17
+                }
+              ],
+              "location": "AddressStep.userShouldSendRequestToDeleteaddressEndpoint(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: Verify static status code expected:\u003c401\u003e but was:\u003c200\u003e\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\r\n\tat org.junit.Assert.assertEquals(Assert.java:647)\r\n\tat com.stepdefinition.CommonSteps.userShouldVerifyTheStatusCodeIs(CommonSteps.java:26)\r\n\tat ✽.User should verify the status code is 200(src/test/resources/TC2_Address.feature:40)\r\n",
+              "duration": 284600,
+              "status": "failed"
+            },
+            "line": 40,
+            "name": "User should verify the status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 38
+                }
+              ],
+              "location": "CommonSteps.userShouldVerifyTheStatusCodeIs(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 7200,
+              "status": "skipped"
+            },
+            "line": 41,
+            "name": "User should verify the deleteAddress response body message matches \"Address deleted successfully\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Address deleted successfully\"",
+                  "offset": 67
+                }
+              ],
+              "location": "AddressStep.userShouldVerifyTheDeleteAddressResponseBodyMessageMatches(String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Address"
+          },
+          {
+            "name": "@DeleteAddress"
+          }
+        ]
+      }
+    ],
+    "name": "Address Module API Automation",
+    "description": "",
+    "id": "address-module-api-automation",
+    "keyword": "Feature",
+    "uri": "src/test/resources/TC2_Address.feature",
+    "tags": [
+      {
+        "name": "@Address",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "Verify update profile picture in the application through API",
+        "description": "",
+        "id": "updateprofilepicture-module-api-automation;verify-update-profile-picture-in-the-application-through-api",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 613800,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User should add headers including multipart-form_data",
+            "match": {
+              "location": "ProfilePicStep.userShouldAddHeadersIncludingMultipartFormData()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 14145400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User should pass form-data",
+            "match": {
+              "location": "ProfilePicStep.userShouldPassFormData()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7202528700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User should send \"POST\" request to UpdateProfilePic endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"POST\"",
+                  "offset": 17
+                }
+              ],
+              "location": "ProfilePicStep.userShouldSendRequestToUpdateProfilePicEndpoint(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: Verify static status code expected:\u003c401\u003e but was:\u003c200\u003e\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\r\n\tat org.junit.Assert.assertEquals(Assert.java:647)\r\n\tat com.stepdefinition.CommonSteps.userShouldVerifyTheStatusCodeIs(CommonSteps.java:26)\r\n\tat ✽.User should verify the status code is 200(src/test/resources/TC3_ChangeProfilePic.feature:8)\r\n",
+              "duration": 464600,
+              "status": "failed"
+            },
+            "line": 8,
+            "name": "User should verify the status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 38
+                }
+              ],
+              "location": "CommonSteps.userShouldVerifyTheStatusCodeIs(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 13300,
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "User should verify the updateProfilePic response body message matches \"Profile updated Successfully\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Profile updated Successfully\"",
+                  "offset": 70
+                }
+              ],
+              "location": "ProfilePicStep.userShouldVerifyTheUpdateProfilePicResponseBodyMessageMatches(String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Profile"
+          }
+        ]
+      }
+    ],
+    "name": "UpdateProfilePicture Module API Automation",
+    "description": "",
+    "id": "updateprofilepicture-module-api-automation",
+    "keyword": "Feature",
+    "uri": "src/test/resources/TC3_ChangeProfilePic.feature",
+    "tags": [
+      {
+        "name": "@Profile",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
